@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+html, body {
+    font-family: 'Open Sans', sans-serif; 
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 1px 10px 0px black;
+    background-color: #ffffff;
+    padding: 10px; 
+}
+
+.imagem {
+    max-width: 100%;
+    height: 100%;
+    background-image: url("../imagens/bg-fundo.webp");
+    background-size: cover;
+}
+
+.box-formulario {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    margin: 60px 0px 0px 60px;
+    color: #033c50;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.maintext {
+    font-family: 'Courier New';
+    background-color: white;
+    padding: 10px 20px;
+    text-align: justify;
+    border-top: 3px solid #033c50;
+    border-right: 3px solid #033c50;
+    border-top-right-radius: 16px;
+}
+
+.maintext h1{
+    padding: 20px 0px 30px;
+}
+form {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #ffffff;
+    border-bottom: 3px solid #033c50;
+    border-right: 3px solid #033c50;
+    border-bottom-left-radius: 14px;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #aaaaaa;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus {
+    border: 2px solid #033c50;
+}
+
+::placeholder { 
+    color: #033c50;
+    opacity: 1;
+}
+input[type=submit] {
+    background-color: #ffffff;
+    height: 50px;
+    font-size: 20px;
+    color: #033c50;
+    transition: 0.3s;
+}
+
+input[type=submit]:hover {
+    background-color: #033c50;
+    color: #ffffff;
+}
+
+.container-chamada{
+    font-family: 'Courier New';
+    max-width: 100%;
+    color:#033c50;
+    margin: auto;
+    padding: 40px;
+    text-align: center;
+}
+
+.mosaico {
+    display: flex;
+    max-width: 1200px;
+    margin: 0px auto 30px;
+}
+
+[class^=img] {
+    width: 55%;
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    transition: 0.7s;
+}
+
+[class^=img]:hover {
+    width: 60%;
+}
+
+.txt-mosaico {
+    width: 40%;
+    padding: 50px;
+}
+
+.txt-mosaico h1{
+    font-family: 'Courier New';
+    padding-bottom: 40px; 
+}
+
+.txt-mosaico p{
+    letter-spacing: 0.15em;
+    line-height: 1.7em;
+}
+
+.txt-mosaico a{
+    color: black;
+}
+
+.container-footer{
+    width: 100%;
+    padding: 20px 200px 60px;
+    background-color: #04678b;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #033c50;
+}
+
+.logo1{
+    width: 160px;
+    height: 50px;
+    background-image: url("../imagens/logo1.png");
+    background-size: 100% 100%;
+
+}
+
+.divbutton {
+    text-align: center;
+    margin: 40px 0px;
+}
+
+.divbutton a{
+    text-decoration: none;
+    background-color: #033c50;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 30px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.divbutton a:hover{
+    color: #033c50;
+    background-color: #ffffff;
+    border: 2px solid #033c50;
+}
+
+footer{
+    height: 100px;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer {
+    display: flex;
+    max-width: 1000px;
+    justify-content: center;
+    margin: auto;
+    color: #aaaaaa;
+    line-height: 1.5em;
+}
+
+.footer h2{
+    font-family: monospace;
+    font-weight: 300;
+    font-size: 20px;
+    color: #033c50;
+    padding-bottom: 10px;
+}
+
+.footer div {
+    padding: 40px 55px;
+}
+
+.footer a{
+    text-decoration: none;
+    color: #aaaaaa;
+}
+
+@media screen and (max-width: 820px) {
+    .container-footer{
+        flex-direction: column;
+        height: 200px;
+        padding: 20px;
+        align-items: center;
+    }
+
+    .box-formulario {
+        width: 70%;
+        margin: 40px auto;
+    }
+
+    .mosaico {
+        width: 100%;
+        flex-direction:column ;
+    }
+
+    .colreverse {
+        flex-direction: column-reverse;
+    }
+
+    [class^=img], [class^=txt] {
+        width: 100%;
+        margin: auto;
+    }
+    [class^=img] {
+        height: 320px;
+    }
+
+    [class^=img]:hover {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+}
